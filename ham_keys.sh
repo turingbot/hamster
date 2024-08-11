@@ -33,7 +33,7 @@ echo ""
 echo -en "${purple}[Optional] ${green}Enter Your telegram Bot token: ${rest}"
 read -r TELEGRAM_BOT_TOKEN
 echo -e "${purple}============================${rest}"
-echo -en "${purple}[Optional] ${green}Enter Your Telegram Channel ID [example: ${yellow}@P_Tech2024${green}]: ${rest}"
+echo -en "${purple}[Optional] ${green}Enter Your Telegram Channel ID [example: ${yellow}@g0db0y${green}]: ${rest}"
 read -r TELEGRAM_CHANNEL_ID
 echo -e "${purple}============================${rest}"
 echo -e "${green}generating ... Keys will be saved in [${yellow}my_keys.txt${green}]..${rest}"
@@ -155,10 +155,11 @@ generate_key() {
 
 # Send to telegram
 send_to_telegram() {
-	local message=$1
-	curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" \
-	-d chat_id="$TELEGRAM_CHANNEL_ID" \
-	-d text="$message" >/dev/null 2>&1
+    local message=$1
+    curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" \
+        -d chat_id="$TELEGRAM_CHANNEL_ID" \
+        -d text="$message" \
+        -d parse_mode="MarkdownV2" > /dev/null 2>&1
 }
 
 # key process
@@ -203,9 +204,10 @@ main() {
 			key=$(generate_key_process "${games[$game_choice, appToken]}" "${games[$game_choice, promoId]}" "$proxy")
 
 			if [[ -n "$key" ]]; then
-				message="$key"
+				message="${games[$game_choice, name]} : $key"
+				telegram_message="\`${key}\`"
 				echo "$message" | tee -a my_keys.txt
-				send_to_telegram "$message"
+				send_to_telegram "$telegram_message"
 			else
 				echo "Error generating key for ${games[$game_choice, name]}"
 			fi
