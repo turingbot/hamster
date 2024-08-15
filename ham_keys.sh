@@ -33,7 +33,7 @@ echo ""
 echo -en "${purple}[Optional] ${green}Enter Your telegram Bot token: ${rest}"
 read -r TELEGRAM_BOT_TOKEN
 echo -e "${purple}============================${rest}"
-echo -en "${purple}[Optional] ${green}Enter Your Telegram Channel ID [example: ${yellow}@g0db0y${green}]: ${rest}"
+echo -en "${purple}[Optional] ${green}Enter Your Telegram Channel ID [example: ${yellow}@P_Tech2024${green}]: ${rest}"
 read -r TELEGRAM_CHANNEL_ID
 echo -e "${purple}============================${rest}"
 echo -e "${green}generating ... Keys will be saved in [${yellow}my_keys.txt${green}]..${rest}"
@@ -60,6 +60,10 @@ games[3, promoId]="fe693b26-b342-4159-8808-15e3ff7f8767"
 games[4, name]="Train Miner"
 games[4, appToken]="82647f43-3f87-402d-88dd-09a90025313f"
 games[4, promoId]="c4480ac7-e178-4973-8061-9ed5b2e17954"
+
+games[5, name]="Merge Away"
+games[5, appToken]="8d1cc2ad-e097-4b86-90ef-7a27e19fb833"
+games[5, promoId]="dc128d28-c45b-411c-98ff-ac7726fbaea4"
 
 # Proxys
 load_proxies() {
@@ -194,7 +198,7 @@ main() {
 	load_proxies "$PROXY_FILE"
 
 	while true; do
-		for game_choice in {1..4}; do
+		for game_choice in {1..5}; do
 			if [[ ${#proxies[@]} -gt 0 ]]; then
 				proxy=${proxies[RANDOM % ${#proxies[@]}]}
 			else
