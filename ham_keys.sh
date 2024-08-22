@@ -210,7 +210,7 @@ main() {
 			key=$(generate_key_process "${games[$game_choice, appToken]}" "${games[$game_choice, promoId]}" "$proxy")
 
 			if [[ -n "$key" ]]; then
-				message="${games[$game_choice, name]} : $key"
+				message="$key"
 				telegram_message="\`${key}\`"
 				echo "$message" | tee -a my_keys.txt
 				send_to_telegram "$telegram_message"
