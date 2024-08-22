@@ -49,10 +49,6 @@ games[1, name]="Polysphere"
 games[1, appToken]="2aaf5aee-2cbc-47ec-8a3f-0962cc14bc71"
 games[1, promoId]="2aaf5aee-2cbc-47ec-8a3f-0962cc14bc71"
 
-games[2, name]="My Clone Army"
-games[2, appToken]="74ee0b5b-775e-4bee-974f-63e7f4d5bacb"
-games[2, promoId]="fe693b26-b342-4159-8808-15e3ff7f8767"
-
 # Proxys
 load_proxies() {
 	if [[ -f "$1" ]]; then
@@ -166,7 +162,7 @@ generate_key_process() {
 		return
 	fi
 
-	for i in {1..20}; do
+	for i in {1..5}; do
 		sleep $((EVENTS_DELAY * (RANDOM % 3 + 1) / 3))
 		has_code=$(emulate_progress "$client_token" "$promo_id" "$proxy")
 
@@ -184,7 +180,7 @@ main() {
 	load_proxies "$PROXY_FILE"
 
 	while true; do
-		for game_choice in {1..2}; do
+		for game_choice in {1..1}; do
 			if [[ ${#proxies[@]} -gt 0 ]]; then
 				proxy=${proxies[RANDOM % ${#proxies[@]}]}
 			else
