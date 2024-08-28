@@ -65,6 +65,10 @@ games[5, name]="Twerk Race 3D"
 games[5, appToken]="61308365-9d16-4040-8bb0-2f4a4c69074c"
 games[5, promoId]="61308365-9d16-4040-8bb0-2f4a4c69074c"
 
+games[6, name]="Cafe Dash"
+games[6, appToken]="bc0971b8-04df-4e72-8a3e-ec4dc663cd11"
+games[6, promoId]="bc0971b8-04df-4e72-8a3e-ec4dc663cd11"
+
 # Proxys
 load_proxies() {
 	if [[ -f "$1" ]]; then
@@ -196,7 +200,7 @@ main() {
 	load_proxies "$PROXY_FILE"
 
 	while true; do
-		for game_choice in {1..5}; do
+		for game_choice in {1..6}; do
 			if [[ ${#proxies[@]} -gt 0 ]]; then
 				proxy=${proxies[RANDOM % ${#proxies[@]}]}
 			else
