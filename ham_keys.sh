@@ -45,29 +45,29 @@ PROXY_FILE="proxy.txt"
 
 # Games
 declare -A games
-games[1, name]="Riding Extreme 3D"
-games[1, appToken]="d28721be-fd2d-4b45-869e-9f253b554e50"
-games[1, promoId]="43e35910-c168-4634-ad4f-52fd764a843f"
+games[1, name]="Train Miner"
+games[1, appToken]="82647f43-3f87-402d-88dd-09a90025313f"
+games[1, promoId]="c4480ac7-e178-4973-8061-9ed5b2e17954"
 
-games[2, name]="Chain Cube 2048"
-games[2, appToken]="d1690a07-3780-4068-810f-9b5bbf2931b2"
-games[2, promoId]="b4170868-cef0-424f-8eb9-be0622e8e8e3"
+games[2, name]="Merge Away"
+games[2, appToken]="8d1cc2ad-e097-4b86-90ef-7a27e19fb833"
+games[2, promoId]="dc128d28-c45b-411c-98ff-ac7726fbaea4"
 
-games[3, name]="Train Miner"
-games[3, appToken]="82647f43-3f87-402d-88dd-09a90025313f"
-games[3, promoId]="c4480ac7-e178-4973-8061-9ed5b2e17954"
+games[3, name]="Twerk Race 3D"
+games[3, appToken]="61308365-9d16-4040-8bb0-2f4a4c69074c"
+games[3, promoId]="61308365-9d16-4040-8bb0-2f4a4c69074c"
 
-games[4, name]="Merge Away"
-games[4, appToken]="8d1cc2ad-e097-4b86-90ef-7a27e19fb833"
-games[4, promoId]="dc128d28-c45b-411c-98ff-ac7726fbaea4"
+games[4, name]="Cafe Dash"
+games[4, appToken]="bc0971b8-04df-4e72-8a3e-ec4dc663cd11"
+games[4, promoId]="bc0971b8-04df-4e72-8a3e-ec4dc663cd11"
 
-games[5, name]="Twerk Race 3D"
-games[5, appToken]="61308365-9d16-4040-8bb0-2f4a4c69074c"
-games[5, promoId]="61308365-9d16-4040-8bb0-2f4a4c69074c"
+games[5, name]="Zoopolis"
+games[5, appToken]="b2436c89-e0aa-4aed-8046-9b0515e1c46b"
+games[5, promoId]="b2436c89-e0aa-4aed-8046-9b0515e1c46b"
 
-games[6, name]="Cafe Dash"
-games[6, appToken]="bc0971b8-04df-4e72-8a3e-ec4dc663cd11"
-games[6, promoId]="bc0971b8-04df-4e72-8a3e-ec4dc663cd11"
+games[6, name]="Gangs Wars"
+games[6, appToken]="b6de60a0-e030-48bb-a551-548372493523"
+games[6, promoId]="dfeb4d7f-08c4-4e82-a0a6-6b51151fe468"
 
 # Proxys
 load_proxies() {
