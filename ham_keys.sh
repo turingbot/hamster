@@ -67,7 +67,7 @@ games[5, promoId]="b2436c89-e0aa-4aed-8046-9b0515e1c46b"
 
 games[6, name]="Gangs Wars"
 games[6, appToken]="b6de60a0-e030-48bb-a551-548372493523"
-games[6, promoId]="dfeb4d7f-08c4-4e82-a0a6-6b51151fe468"
+games[6, promoId]="c7821fa7-6632-482c-9635-2bd5798585f9"
 
 # Proxys
 load_proxies() {
