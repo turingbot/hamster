@@ -53,10 +53,6 @@ games[2, name]="Mow and Trim"
 games[2, appToken]="ef319a80-949a-492e-8ee0-424fb5fc20a6"
 games[2, promoId]="ef319a80-949a-492e-8ee0-424fb5fc20a6"
 
-games[3, name]="Gangs Wars"
-games[3, appToken]="b6de60a0-e030-48bb-a551-548372493523"
-games[3, promoId]="c7821fa7-6632-482c-9635-2bd5798585f9"
-
 # Proxys
 load_proxies() {
 	if [[ -f "$1" ]]; then
@@ -188,7 +184,7 @@ main() {
 	load_proxies "$PROXY_FILE"
 
 	while true; do
-		for game_choice in {1..3}; do
+		for game_choice in {1..2}; do
 			if [[ ${#proxies[@]} -gt 0 ]]; then
 				proxy=${proxies[RANDOM % ${#proxies[@]}]}
 			else
