@@ -53,6 +53,14 @@ games[2, name]="Mow and Trim"
 games[2, appToken]="ef319a80-949a-492e-8ee0-424fb5fc20a6"
 games[2, promoId]="ef319a80-949a-492e-8ee0-424fb5fc20a6"
 
+games[3, name]="Fluff Crusade"
+games[3, appToken]="112887b0-a8af-4eb2-ac63-d82df78283d9"
+games[3, promoId]="112887b0-a8af-4eb2-ac63-d82df78283d9"
+
+games[4, name]="Tile Trio"
+games[4, appToken]="e68b39d2-4880-4a31-b3aa-0393e7df10c7"
+games[4, promoId]="e68b39d2-4880-4a31-b3aa-0393e7df10c7"
+
 # Proxys
 load_proxies() {
 	if [[ -f "$1" ]]; then
@@ -184,7 +192,7 @@ main() {
 	load_proxies "$PROXY_FILE"
 
 	while true; do
-		for game_choice in {1..2}; do
+		for game_choice in {1..4}; do
 			if [[ ${#proxies[@]} -gt 0 ]]; then
 				proxy=${proxies[RANDOM % ${#proxies[@]}]}
 			else
