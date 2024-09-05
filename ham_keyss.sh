@@ -57,6 +57,11 @@ games[3, name]="Tile Trio"
 games[3, appToken]="e68b39d2-4880-4a31-b3aa-0393e7df10c7"
 games[3, promoId]="e68b39d2-4880-4a31-b3aa-0393e7df10c7"
 
+games[4, name]="Tile Trio"
+games[4, appToken]="04ebd6de-69b7-43d1-9c4b-04a6ca3305af"
+games[4, promoId]="04ebd6de-69b7-43d1-9c4b-04a6ca3305af"
+
+
 # Proxys
 load_proxies() {
 	if [[ -f "$1" ]]; then
@@ -188,7 +193,7 @@ main() {
 	load_proxies "$PROXY_FILE"
 
 	while true; do
-		for game_choice in {1..3}; do
+		for game_choice in {1..4}; do
 			if [[ ${#proxies[@]} -gt 0 ]]; then
 				proxy=${proxies[RANDOM % ${#proxies[@]}]}
 			else
